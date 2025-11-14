@@ -1,19 +1,4 @@
 
-        /* Container principal */
-        .body {
-            display: flex;          /* usa flexbox */
-            flex-direction: row;    /* itens em linha */
-            gap: 20px;              /* espaço entre os blocos */
-            flex-wrap: nowrap;      /* não permite que os itens quebrem */
-        }
-
-        /* Cada bloco */
-        .coluna {
-            flex: 1;                /* distribui o espaço igualmente */
-            padding: 10px;
-            background: #f0f0f0;
-            box-sizing: border-box;
-        }
 
 
 h1 {
@@ -132,5 +117,6 @@ star-rating::part(fieldsetPart)::after  {
    display: block;
 
  }
+
 
 

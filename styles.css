@@ -103,7 +103,7 @@ h1 {
 .ddd {
   margin: auto;
   width: 40%;
-}*/
+}
 
 #pl {
   font-size:30px;
@@ -118,6 +118,7 @@ star-rating::part(fieldsetPart)::after  {
    display: block;
 
  }
+
 
 
 

@@ -21,25 +21,37 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    
+
+content="width=device-width, initial-scale=1.0">
+    <title>Layout lado a lado</title>
     <style>
-        /* Estilos padrão (desktop) */
+        /* Container principal */
         .container {
-            display: flex;
-            gap: 20px;
-        }
-        .coluna {
-            flex: 1;
-            padding: 10px;
-            background: #f0f0f0;
+            display: flex;          /* usa flexbox */
+            flex-direction: row;    /* itens em linha */
+            gap: 20px;              /* espaço entre os blocos */
+            flex-wrap: nowrap;      /* não permite que os itens quebrem */
         }
 
-        /* Quando a largura da tela for ≤ 768px */
-        @media (max-width: 768px) {
+        /* Cada bloco */
+        .coluna {
+            flex: 1;                /* distribui o espaço igualmente */
+            padding: 10px;
+            background: #f0f0f0;
+            box-sizing: border-box;
+        }
+
+        /* Se quiser que, em telas muito estreitas, os blocos empilhem,
+           descomente a media query abaixo:
+
+        @media (max-width: 480px) {
             .container {
-                flex-direction: column;   /* empilha as colunas */
+                flex-direction: column;
             }
         }
+        */
     </style>
 
 </head>
@@ -125,5 +137,6 @@
 
   </body>
 </html>
+
 
 

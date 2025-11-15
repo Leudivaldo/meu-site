@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>leudo</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.icone.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible"content="IE=edge" />
     <meta name="description" content="Register for a machine learning workshop at our school for machines who can't learn good and want to do other stuff good too" />
     <meta property="og:title" content="Machine Learning Workshop" />
@@ -21,46 +22,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Container principal */
-        .ddd {
-            display: flex;          /* usa flexbox */
-            flex-direction: row;    /* itens em linha */
-            gap: 25px;              /* espaço entre os blocos */
-            flex-wrap: nowrap;      /* não permite que os itens quebrem */
-        }
-
-        /* Cada bloco */
-        .ddd {
-            flex: 1;                /* distribui o espaço igualmente */
-            padding: 25px;
-            background: #f0f0f0;
-            box-sizing: border-box;
-        }
-
-        /* Se quiser que, em telas muito estreitas, os blocos empilhem,
-           descomente a media query abaixo:
-
-        @media (max-width: 480px) {
-            .container {
-                flex-direction: column;
-            }
-        }
-        */
-    </style>
-  
     
 
 </head>
 <bode>
+
+      <rating>
+        <input type="radio" name="rating" value="1" aria-label="1 star" required/>
+        <input type="radio" name="rating" value="2" aria-label="2 stars"/>
+        <input type="radio" name="rating" value="3" aria-label="3 stars"/>
+        <input type="radio" name="rating" value="4" aria-label="4 stars"/>
+        <input type="radio" name="rating" value="5" aria-label="5 stars"/>
+      </rating>
+     </fieldset>
+     <button type="reset">Reset</button>
+     <button type="submit">Submit</button>
+ </form>
+ </template>
  
  
     <ul>
       <div class="ddd">
       <li><a href="#home" class="active" style="font-size:30px;">leudo</a></li>
-      <li><a href="#news" class="active" style="font-size:30px;">news</a></li>
-      <li><a href="#contact" class="active" style="font-size:30px;">home</a></li>
-      <li><a href="#about"classe="actve" style="font-size:30px;" >matos</a></li>
+      <li><a href="#news">news</a></li>
+      <li><a href="#contact">home</a></li>
+      <li><a href="#about"style="font-size:30px;" >matos</a></li>
     </div>
     
     </ul>
@@ -121,21 +107,3 @@
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

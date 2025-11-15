@@ -32,7 +32,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 15px;
             font-size: 10px;
             background: #f0f0f0;
 
@@ -62,12 +62,12 @@
         }
 
         /* Quando a tela for menor que 600 px, o menu vira coluna */
-        @media (max-width: 600px) {
+        @media (max-width: 1200px) {
             ul {
                 flex-direction: column;   /* empilha os itens */
             }
             ul li.big-font {
-                min-width: auto;          /* volta ao valor padrão */
+                min-width: 300;          /* volta ao valor padrão */
             }
         }
     </style>
@@ -142,6 +142,7 @@
 
   </body>
 </html>
+
 
 
 

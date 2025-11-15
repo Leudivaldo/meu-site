@@ -21,9 +21,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Container principal */
+        .ddd {
+            display: flex;          /* usa flexbox */
+            flex-direction: row;    /* itens em linha */
+            gap: 20px;              /* espaço entre os blocos */
+            flex-wrap: nowrap;      /* não permite que os itens quebrem */
+        }
 
+        /* Cada bloco */
+        .ddd {
+            flex: 1;                /* distribui o espaço igualmente */
+            padding: 10px;
+            background: #f0f0f0;
+            box-sizing: border-box;
+        }
 
+        /* Se quiser que, em telas muito estreitas, os blocos empilhem,
+           descomente a media query abaixo:
 
+        @media (max-width: 480px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        */
+    </style>
   
     
 
@@ -97,6 +121,7 @@
 
   </body>
 </html>
+
 
 
 

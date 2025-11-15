@@ -25,23 +25,23 @@
     
     
 
- <style>
+
+       <style>
         /* Estilos básicos da lista */
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            font-size: 10px;
             background: #f0f0f0;
+            border-radius: 15px;
 
-            display: flex;          /* itens em linha por padrão */
+            display: flex;          /* por padrão, em linha */
             flex-wrap: nowrap;
+            width: 100%;            /* garante que o <ul> ocupe toda a largura disponível */
         }
 
         ul li {
-            flex: 1 1 0;            /* todos começam com 0 px e crescem igualmente */
+            flex: 1 1 0;            /* em telas largas, divide o espaço */
             text-align: center;
         }
 
@@ -62,12 +62,17 @@
         }
 
         /* Quando a tela for menor que 600 px, o menu vira coluna */
-        @media (max-width: 70px) {
+        @media (max-width: 600px) {
             ul {
                 flex-direction: column;   /* empilha os itens */
+                width: 100%;              /* garante que o <ul> continue com a largura total */
+            }
+            ul li {
+                width: 100%;              /* cada <li> ocupa a largura total da coluna */
+                flex: 1 1 100%;           /* permite que ocupe todo o espaço disponível */
             }
             ul li.big-font {
-                min-width: 300px;          /* volta ao valor padrão */
+                min-width: auto;          /* volta ao valor padrão */
             }
         }
     </style>
@@ -142,6 +147,7 @@
 
   </body>
 </html>
+
 
 
 

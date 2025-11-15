@@ -100,13 +100,28 @@ h1 {
 
 } 
 
-.ddd {
-  margin: auto;
-  width: 40%;
-}
+
 
 #pl {
-  font-size:30px;
+  font-size:3
+
+    
+    .ddd {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .ddd li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .ddd a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+0px;
   color:red;
 }
 
@@ -118,6 +133,7 @@ star-rating::part(fieldsetPart)::after  {
    display: block;
 
  }
+
 
 
 

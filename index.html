@@ -22,34 +22,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-        /* Container principal */
-        .ddd {
-            display: flex;          /* usa flexbox */
-            flex-direction: row;    /* itens em linha */
-            gap: 20px;              /* espaço entre os blocos */
-            flex-wrap: nowrap;      /* não permite que os itens quebrem */
+     
+ <style>
+        /* Estilos aplicados ao elemento <ul> */
+        ul {
+            list-style-type: none;   /* remove os marcadores da lista */
+            margin: 0;               /* remove margens externas */
+            padding: 0;              /* remove espaçamento interno */
+            overflow: hidden;        /* impede que o conteúdo ultrapasse o contêiner */
+            border-radius: 15px;     /* cantos arredondados */
+            font-size: 10px;         /* tamanho da fonte dos itens */
+            background: #f0f0f0;     /* cor de fundo (opcional) */
         }
 
-        /* Cada bloco */
-        .coluna {
-            flex: 1;                /* distribui o espaço igualmente */
-            padding: 10px;
-            background: #f0f0f0;
-            box-sizing: border-box;
+        /* Opcional: faz os itens ficarem lado a lado */
+        ul li {
+            display: inline-block;
         }
 
-        /* Se quiser que, em telas muito estreitas, os blocos empilhem,
-           descomente a media query abaixo:
-
-        @media (max-width: 480px) {
-            .container {
-                flex-direction: column;
-            }
+        /* Opcional: estiliza os links */
+        ul li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
         }
-        */
+        ul li a:hover {
+            background: #ddd;
+        }
     </style>
-
 </head>
 <bode>
 
@@ -67,15 +68,16 @@
  </template>
  
  
-    <ul>
-      <div class="ddd">
-      <li><a href="#home" class="active" style="font-size:30px;">leudo</a></li>
-      <li><a href="#news">news</a></li>
-      <li><a href="#contact">home</a></li>
-      <li><a href="#about"style="font-size:30px;" >matos</a></li>
-    </div>
     
+
+<div class="ddd">
+    <ul>
+        <li><a href="#home" class="active" style="font-size:30px;">leudo</a></li>
+        <li><a href="#news">news</a></li>
+        <li><a href="#contact">home</a></li>
+        <li><a href="#about" style="font-size:30px;">matos</a></li>
     </ul>
+</div>
 
 
 <h1 id="dem"> desenvolvedor </h1>
@@ -133,6 +135,7 @@
 
   </body>
 </html>
+
 
 
 

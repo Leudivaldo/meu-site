@@ -26,6 +26,7 @@
     
 
  <style>
+        /* Estilos básicos da lista */
         ul {
             list-style-type: none;
             margin: 0;
@@ -35,12 +36,12 @@
             font-size: 10px;
             background: #f0f0f0;
 
-            display: flex;          /* itens em linha */
-            flex-wrap: nowrap;      /* não quebra para a próxima linha */
+            display: flex;          /* itens em linha por padrão */
+            flex-wrap: nowrap;
         }
 
         ul li {
-            flex: 1 1 0;            /* começa com 0 px e cresce igualmente */
+            flex: 1 1 0;            /* todos começam com 0 px e crescem igualmente */
             text-align: center;
         }
 
@@ -51,7 +52,7 @@
 
         ul li a {
             display: block;
-            padding: 15px 20px;     /* espaço interno */
+            padding: 15px 20px;
             line-height: 1.5;
             text-decoration: none;
             color: #333;
@@ -59,7 +60,26 @@
         ul li a:hover {
             background: #ddd;
         }
+
+        /* Quando a tela for menor que 600 px, o menu vira coluna */
+        @media (max-width: 600px) {
+            ul {
+                flex-direction: column;   /* empilha os itens */
+            }
+            ul li.big-font {
+                min-width: auto;          /* volta ao valor padrão */
+            }
+        }
     </style>
+</head>
+<body>
+
+<ul class="ddd">
+    <li class="big-font"><a href="#home" class="active" style="font-size:30px;">leudo</a></li>
+    <li><a href="#news">news</a></li>
+    <li><a href="#contact">home</a></li>
+    <li class="big-font"><a href="#about" style="font-size:30px;">matos</a></li>
+</ul>
 </head>
 <body>
  
@@ -131,6 +151,7 @@
 
   </body>
 </html>
+
 
 
 

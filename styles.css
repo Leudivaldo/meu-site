@@ -1,4 +1,36 @@
+ ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            border-radius: 15px;
+            display: flex;
+            width: 100%;
+        }
+        ul li {
+            flex: 1 1 0;
+            text-align: center;
+        }
+        ul li.big-font { min-width: 120px; }
+        ul li a {
+            display: block;
+            padding: 15px 20px;
+            line-height: 1.5;
+            text-decoration: none;
+            color: #333;
+        }
+        ul li a:hover { background: #ddd; }
 
+        @media (max-width: 600px) {
+            ul { flex-direction: column; }
+            ul li {
+                width: 100%;
+                flex: none;          /* cada item tem sua própria altura */
+                float: none;         /* garante que nenhum float persista */
+            }
+            ul li a { width: 100%; box-sizing: border-box; }
+            ul li.big-font { min-width: auto; }
+        }
 
 
 h1 {
@@ -16,13 +48,7 @@ p {
    font-size: 160%;
 }
 
-a:link, a:visited {
-  color: white;
-  padding: 25px 30px;
-   text-align:center;
-  text-decoration: none;
-  display: inline-block;
-}
+
 
 
 table {
@@ -48,35 +74,15 @@ th {
 }
 
 
-li {
-  float: left;
-
-}
-li a {
-  display: inline-block;
-  color: rgb(10, 10, 10);
-  text-align: center;
-  padding: 16px ;
-  text-decoration: none;
-  background-color: red;
-  border-radius: 10px ;
-  border: 1px solid #f5f8f4;
-
-}
 
 
-li a:hover {
-  background-color: #111111;
-}
+
 
 .active{
   background-color: blue;
 }
 
-#cars {
-  background-color: rgb(155, 190, 28);
-  font-size:33px;
-}
+
  
 
 h1 { 
@@ -100,9 +106,7 @@ h1 {
     
   
 
-0px;
-  color:red;
-}
+
 
 star-rating::part(fieldsetPart)::after  {
   content: " - this matches `star-rating::part(fieldsetPart)`"
@@ -112,6 +116,7 @@ star-rating::part(fieldsetPart)::after  {
    display: block;
 
  }
+
 
 
 

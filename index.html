@@ -24,7 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-<style>
+
+ <style>
         ul {
             list-style-type: none;
             margin: 0;
@@ -34,18 +35,19 @@
             font-size: 10px;
             background: #f0f0f0;
 
-            display: flex;          /* itens em linha */
-            flex-wrap: nowrap;      /* não quebra para a próxima linha */
+            display: flex;
+            flex-wrap: nowrap;
         }
 
         ul li {
-            flex: 1;                /* distribui o espaço igualmente */
-            text-align: center;     /* opcional: centraliza o texto */
+            flex: 1;
+            text-align: center;
         }
 
         ul li a {
             display: block;
-            padding: 10px 15px;
+            padding: 15px 20px;      /* mais espaço interno */
+            line-height: 1.5;        /* centraliza verticalmente */
             text-decoration: none;
             color: #333;
         }
@@ -53,7 +55,6 @@
             background: #ddd;
         }
     </style>
- 
 </head>
 <body>
  
@@ -125,6 +126,7 @@
 
   </body>
 </html>
+
 
 
 

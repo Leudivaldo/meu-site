@@ -22,8 +22,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@450" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <style>
-        /* Estilos da lista */
+    
+    <style>
         ul {
             list-style-type: none;
             margin: 0;
@@ -32,14 +32,17 @@
             border-radius: 15px;
             font-size: 10px;
             background: #f0f0f0;
+
+            /* deixa os itens em linha e impede quebra */
+            display: flex;
+            flex-wrap: nowrap;
         }
 
-        /* Faz os itens ficarem lado a lado */
         ul li {
-            display: inline-block;   /* ou "float: left;" se preferir */
+            /* cada item ocupa o espaço que precisar, sem crescer */
+            flex: 0 0 auto;
         }
 
-        /* Estilo dos links */
         ul li a {
             display: block;
             padding: 10px 15px;
@@ -50,6 +53,7 @@
             background: #ddd;
         }
     </style>
+
  
 </head>
 <body>
@@ -122,6 +126,7 @@
 
   </body>
 </html>
+
 
 
 

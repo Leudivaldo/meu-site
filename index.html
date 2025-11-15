@@ -35,19 +35,24 @@
             font-size: 10px;
             background: #f0f0f0;
 
-            display: flex;
-            flex-wrap: nowrap;
+            display: flex;          /* itens em linha */
+            flex-wrap: nowrap;      /* não quebra para a próxima linha */
         }
 
         ul li {
-            flex: 1;
+            flex: 1 1 0;            /* começa com 0 px e cresce igualmente */
             text-align: center;
+        }
+
+        /* itens que têm fonte maior recebem um min‑width um pouco maior */
+        ul li.big-font {
+            min-width: 120px;
         }
 
         ul li a {
             display: block;
-            padding: 15px 20px;      /* mais espaço interno */
-            line-height: 1.5;        /* centraliza verticalmente */
+            padding: 15px 20px;     /* espaço interno */
+            line-height: 1.5;
             text-decoration: none;
             color: #333;
         }
@@ -126,6 +131,7 @@
 
   </body>
 </html>
+
 
 
 

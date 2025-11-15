@@ -47,14 +47,6 @@ th {
   background-color: hwb(186 51% 45%);
 }
 
-ul {
-  list-style-type: none;
-  margin:0;
-  padding: 0;
-  overflow: hidden;
-  border-radius: 15px;
-  font-size: 10px;
-}
 
 li {
   float: left;
@@ -133,6 +125,7 @@ star-rating::part(fieldsetPart)::after  {
    display: block;
 
  }
+
 
 
 

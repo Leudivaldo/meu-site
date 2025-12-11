@@ -19,28 +19,35 @@
     <script src="https:    
 </head>
 <body>
+from flask import Flask, request, render_template_string
+   import csv
+   import io
 
-         <script type="text/python">
-           import csv
-           books = []
-           # Adicionando dicionarios a lista
-for i in range(2):
-    book = dict()
-    book["author"] = input("Enter an author: ")
-    book["title"] = input("Enter a title: ")
-    books.append(book)
+   app = Flask(_name_)
 
-# Gravando no CSV
-with open('livros.csv', 'w', newline='', encoding='utf-8') as arquivo:
-    campos = ['author', 'title']
-    escritor = csv.DictWriter(arquivo, fieldnames=campos)
-    escritor.writeheader()
-    escritor.writerows(books)
+   HTML = '''
+   <form method="post">
+       Autor: <input name="author"><br>
+       Título: <input name="title"><br>
+       <button type="submit">Adicionar</button>
+   </form>
+   {% for b in books %}<p>{{ b.author }} – {{ b.title }}</p>{% endfor %}
+   '''
 
-# Mostrando os livros
-for book in books:
-    print(book)
-       </script>
+   books = []
+
+   @app.route('/', methods=['GET', 'POST'])
+   def index():
+       if request.method == 'POST':
+           books.append({
+               'author': request.form['author'],
+               'title': request.form['title']
+           })
+       return render_template_string(HTML, books=books)
+
+   if _name_ == '_main_':
+       app.run(debug=True)
+         
 
 <ul class="ddd">
     <li class="big-font"><a href="https://wa.me/98984148993?text=Gostaria%20de%20saber%20sobre%20o%20preço%20do%20apartamento" style="font-size:30px;"><abbr title="entrar em contato">leudo</abbr></a></li>
@@ -88,6 +95,7 @@ for book in books:
 <script src="scripts/main.js"></script>
 </body>
 </html>
+
 
 
 

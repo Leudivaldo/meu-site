@@ -16,37 +16,9 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
 
-    <script src="https:    
 </head>
 <body>
-from flask import Flask, request, render_template_string
-   import csv
-   import io
 
-   app = Flask(_name_)
-
-   HTML = '''
-   <form method="post">
-       Autor: <input name="author"><br>
-       Título: <input name="title"><br>
-       <button type="submit">Adicionar</button>
-   </form>
-   {% for b in books %}<p>{{ b.author }} – {{ b.title }}</p>{% endfor %}
-   '''
-
-   books = []
-
-   @app.route('/', methods=['GET', 'POST'])
-   def index():
-       if request.method == 'POST':
-           books.append({
-               'author': request.form['author'],
-               'title': request.form['title']
-           })
-       return render_template_string(HTML, books=books)
-
-   if _name_ == '_main_':
-       app.run(debug=True)
          
 
 <ul class="ddd">
@@ -95,6 +67,7 @@ from flask import Flask, request, render_template_string
 <script src="scripts/main.js"></script>
 </body>
 </html>
+
 
 
 

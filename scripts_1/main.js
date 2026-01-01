@@ -1,11 +1,3 @@
-const myHeading = document.querySelector("#dem");
-
-myHeading.addEventListener("click", function() {
-  myHeading.textContent = "Novo nome";
-  myHeading.removeEventListener("click", this);
-});
-
-
 const anoNovo = new Date('December 31, 2024 23:59:59').getTime();
 
 setInterval(() => {
@@ -25,6 +17,17 @@ setInterval(() => {
     document.getElementById('countdown').innerHTML = "ANO NOVO! 🎉";
   }
 }, 1000);
+
+
+
+const myHeading = document.querySelector("#dem");
+
+myHeading.addEventListener("click", function() {
+  myHeading.textContent = "Novo nome";
+  myHeading.removeEventListener("click", this);
+});
+
+
 
 
 

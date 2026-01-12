@@ -1,19 +1,75 @@
 
 /* ---- regras gerais que já estavam no seu arquivo ---- */
-h1 { font-family: verdana; font-size: 300%; }
-h1, h2, p, #pl { color: #070707; text-align:center; }
-p { padding: 10px; margin: 10px; font-family: verdana; font-size: 160%; }
-a:link, a:visited { color: white; padding: 25px 30px; text-align:center; text-decoration: none; display: inline-block; }
-table { font-family: arial, sans-serif; width: 100%; }
-td, th { border: 1px solid #e7e0e0; border-collapse: collapse; border-radius: 10px; text-align: left; padding: 10px 40px 20px 30px; }
-th { background-color: hwb(186 51% 45%); }
-li a { display: inline-block; color: rgb(10, 10, 10); text-align: center; padding: 16px; text-decoration: none; background-color: red; border-radius: 10px; border: 1px solid #f5f8f4; }
-li a:hover { background-color: #111111; }
-.active{ background-color: blue; }
-#cars { background-color: rgb(155, 190, 28); font-size:33px; }
-h1 { color: white; text-shadow: 4px 2px 2px black; }
-#pp { margin: 300px; padding: 10px ; text-align: center; background: green; border-radius: 10px; }
-#pl { font-size:30px; color:red; }
+h1 { 
+    font-family: verdana; 
+    font-size: 300%; 
+}
+h1, h2, p, #pl { 
+    color: #070707; 
+    text-align:center; 
+}
+p 
+{ 
+    padding: 10px; 
+    margin: 10px; 
+    font-family: verdana; 
+    font-size: 160%; 
+}
+a:link, a:visited { 
+    color: white; 
+    padding: 25px 30px; 
+    text-align:center; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+table { 
+    font-family: arial, sans-serif; 
+    width: 100%; 
+}
+td, th { 
+    border: 1px solid #e7e0e0; 
+    border-collapse: collapse; 
+    border-radius: 10px; 
+    text-align: left; 
+    padding: 10px 40px 20px 30px; 
+}
+th { 
+    background-color: hwb(186 51% 45%); 
+}
+li a { 
+    display: inline-block; 
+    color: rgb(10, 10, 10); 
+    text-align: center; 
+    padding: 16px; 
+    text-decoration: none; 
+    background-color: red; 
+    border-radius: 10px; 
+    border: 1px solid #f5f8f4; 
+}
+li a:hover { 
+    background-color: #111111; 
+}
+.active{ 
+    background-color: blue; 
+}
+#cars { 
+    background-color: rgb(155, 190, 28); 
+    font-size:33px; 
+}
+h1 { 
+    color: white; 
+    text-shadow: 4px 2px 2px black; 
+}
+#pp { 
+    margin: 300px; 
+    padding: 10px ; 
+    text-align: center; 
+    background: green; 
+    border-radius: 10px; 
+}
+#pl { font-size:30px; 
+     color:red; 
+    }
 
 /* ---- regras do menu (flexbox) ---- */
 ul {
@@ -61,5 +117,14 @@ star-rating::part(fieldsetPart)::after {
 /* Remove a largura fixa que estava limitando o menu */
 .ddd { margin: auto; }   /* só centraliza, sem width: 40% */
 
+.ddd li a {
+  text-decoration: none !important;
+}
+
+.ddd li a abbr {
+  text-decoration: none !important;
+}
+
 
 ---
+

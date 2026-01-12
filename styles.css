@@ -44,7 +44,7 @@ li a {
     text-decoration: none; 
     background-color: red; 
     border-radius: 10px; 
-    border: 1px solid #f5f8f4; 
+    border: 10px solid Black; 
 }
 li a:hover { 
     background-color: #111111; 
@@ -127,4 +127,5 @@ star-rating::part(fieldsetPart)::after {
 
 
 ---
+
 

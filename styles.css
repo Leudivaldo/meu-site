@@ -1,15 +1,18 @@
-
 /* ---- regras gerais que já estavam no seu arquivo ---- */
-h1 { 
+body {
+    background-color: #D1D1D1; 
+    margin: 10px; 
+
+}
+h1 {
     font-family: verdana; 
     font-size: 300%; 
 }
-h1, h2, p, #pl { 
+h1, h2, p, #pl {
     color: #070707; 
     text-align:center; 
 }
-p 
-{ 
+p {
     padding: 10px; 
     margin: 10px; 
     font-family: verdana; 
@@ -20,8 +23,9 @@ a:link, a:visited {
     padding: 25px 30px; 
     text-align:center; 
     text-decoration: none; 
-    display: inline-block; 
+    display: inline-block;
 }
+
 table { 
     font-family: arial, sans-serif; 
     width: 100%; 
@@ -30,54 +34,61 @@ td, th {
     border: 1px solid #e7e0e0; 
     border-collapse: collapse; 
     border-radius: 10px; 
-    text-align: left; 
-    padding: 10px 40px 20px 30px; 
-}
-th { 
-    background-color: hwb(186 51% 45%); 
-}
-li a { 
-    display: inline-block; 
-    color: rgb(10, 10, 10); 
     text-align: center; 
-    padding: 16px; 
-    text-decoration: none; 
-    background-color: red; 
-    border-radius: 10px; 
-    border: 10px solid green; 
+    padding: 1px, 1px;
+
 }
-li a:hover { 
-    background-color: blank; 
+    
+
+
+tabela tr th:hover, td:hover { 
+    background-color: white; 
 }
-.active{ 
-    background-color: blue; 
-}
-#cars { 
-    background-color: rgb(155, 190, 28); 
-    font-size:33px; 
-}
-h1 { 
-    color: white; 
+
+
+li a {
+    display: inline-block;
+    color: rgb(10, 10, 10);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    background-color: #D1D1D1;
+    border-radius: 15px;
+    border: 0px solid black;
+    }
+li a:hover {
+    background-color: #111111;
+ }
+.active{
+    background-color: red;
+ }
+#cars {
+    background-color: white;
+    font-size: 33px;
+ }
+h1 {
+    color: white;
     text-shadow: 4px 2px 2px black; 
 }
-#pp { 
-    margin: 300px; 
-    padding: 10px ; 
-    text-align: center; 
-    background: green; 
+#pp {
+    margin: 300px;
+    padding: 10px ;
+    text-align: center;
+    background: green;
     border-radius: 10px; 
 }
-#pl { font-size:30px; 
-     color:red; 
-    }
+#pl {
+    font-size:30px;
+    color: white;
+}
 
 /* ---- regras do menu (flexbox) ---- */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background: #f0f0f0;
-    border-radius: 15px;
+    background: #D1D1D1;
+    border-radius: 10px;
     display: flex;          /* padrão: linha */
     width: 100%;
 }
@@ -85,6 +96,11 @@ ul li {
     flex: 1 1 0;            /* divide o espaço em telas largas */
     text-align: center;
 }
+
+  .ddd li a {
+    color: black;  
+}
+
 ul li a {
     display: block;
     padding: 15px 20px;
@@ -92,7 +108,10 @@ ul li a {
     text-decoration: none;
     color: #333;
 }
-ul li a:hover { background: #ddd; }
+ul li a:hover { 
+    background: white; 
+}
+
 
 /* Quando a tela for menor que 600 px, o menu vira coluna */
 @media (max-width: 600px) {
@@ -107,7 +126,7 @@ ul li a:hover { background: #ddd; }
 
 /* ---- outras regras que estavam no seu HTML ---- */
 star-rating::part(fieldsetPart)::after {
-    content: " - this matches `star-rating::part(fieldsetPart)`";
+    content: " - this matches star-rating::part(fieldsetPart)";
 }
 :where(star-rating) {
     margin-bottom: 0;
@@ -115,7 +134,6 @@ star-rating::part(fieldsetPart)::after {
 }
 
 /* Remove a largura fixa que estava limitando o menu */
-.ddd { margin: auto; }   /* só centraliza, sem width: 40% */
 
 .ddd li a {
   text-decoration: none !important;
@@ -125,8 +143,28 @@ star-rating::part(fieldsetPart)::after {
   text-decoration: none !important;
 }
 
+.imagens {
+  display: flex;
+  justify-content: space-between;
+}
 
----
+.imagens img {
+  width: 50%;
+  height: auto;
+  max-width: 320px; /* tamanho máximo */
+  margin: 1px;
+}
 
+ #pl::selection {
+                color: white;
+                background-color: black;
+            }
+   
 
-
+.ddd li:first-child {
+  padding: 0;
+}
+.ddd li:first-child img {
+  height: 60px; /* ajuste a altura para combinar com os outros itens */
+  vertical-align: middle;
+}
